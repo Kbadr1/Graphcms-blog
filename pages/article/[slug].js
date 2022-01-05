@@ -27,8 +27,9 @@ const ArticleDetails = ({ article }) => {
                 <Typography variant="h5" sx={{ fontWeight: "600" }} mt={4}>
                   {article.title}
                 </Typography>
-                {article.content.raw.children.map((paragraph) => (
+                {article.content.raw.children.map((paragraph, i) => (
                   <Typography
+                    key={i}
                     variant="body1"
                     sx={{ color: "#242424", fontWeight: "300" }}
                     pt={4}
